@@ -1,0 +1,32 @@
+body {
+    font: 1em Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+
+
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.item {
+    width: 50%;
+    height: 50%;
+}
+
+.a-item:nth-child(1) {
+    align-self: flex-start;
+    background-color: red;
+}
+
+
+
+.a-item:nth-child(2) {
+    align-self: center;
+    background-color: green;
+}
+
+.a-item:nth-child(3) {
+    align-self: flex-end;
+    background-color: blue;
+}
