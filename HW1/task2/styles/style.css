@@ -1,0 +1,40 @@
+body {
+    font: 1em Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+
+
+.container {
+    position: relative;
+    height: 500px;
+    width: 500px;
+    border: solid;
+}
+
+
+.item {
+    width: 50%;
+    height: 50%;
+}
+
+.item1 {
+    top: 0;
+    left: 0;
+    position: absolute;
+    background-color: red;
+}
+
+
+
+.item3 {
+    position: absolute;
+    left: 25%;
+    top: 25%;
+    background-color: green;
+}
+
+.item2 {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    background-color: blue;
+}
