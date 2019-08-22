@@ -1,0 +1,26 @@
+@media screen and (min-width: 1920px){
+    .container {
+        border: 5px solid rgb(100, 100, 100);
+        border-radius: .5em;
+        padding: 10px;
+        display: flex;
+        background-color: rgb(200, 200, 200);
+    
+    }
+
+    .col-r {
+        flex-direction: column-reverse;
+    }
+
+    .item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 200px;
+        height: 200px;
+        padding: 10px;
+        background-color: rgba(111, 41, 97, .3);
+        border: 2px solid rgba(111, 41, 97, .5);
+    }
+
+}
