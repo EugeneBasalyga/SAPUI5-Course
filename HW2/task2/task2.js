@@ -6,7 +6,7 @@ function showPopup(){
     var newName = "";
 
     if (/\d/.test(person)) {
-      name.innerHTML = "Hello " + person;
+        newName = person.split("").reverse().join("");
     } else {
         for (let i = 0; i < person.length; i++) {
             if (i % 2 == 0){
@@ -16,8 +16,8 @@ function showPopup(){
                 newName += person[i].toLowerCase();
             }
         }
-        alert(newName);
     }
+    name.innerHTML = "Hello " + newName;
 }
 
 btn3.addEventListener("click", showPopup);
