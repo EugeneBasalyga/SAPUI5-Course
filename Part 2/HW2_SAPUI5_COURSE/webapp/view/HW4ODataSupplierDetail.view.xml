@@ -1,0 +1,213 @@
+<mvc:View 	
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns:l="sap.ui.layout"
+	xmlns:f="sap.ui.layout.form"
+	xmlns:core="sap.ui.core"
+	xmlns="sap.m" 
+	xmlns:html="http://www.w3.org/1999/xhtml" controllerName="BAS.HW2_SAPUI5_COURSE.controller.HW4ODataSupplierDetail">
+	<VBox class="sapUiSmallMargin">
+    	<Bar id="bar0">
+	        <contentLeft>
+	            <Button xmlns="sap.m" xmlns:action="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1" id="button0" icon="sap-icon://navigation-left-arrow" press="action" action:wiring="\{'press':\{'navigation':\{'routeName':'HW4ODataTable'\}\}\}"/>
+	        </contentLeft>
+	    </Bar>
+		<f:Form id="FormToolbar"
+			editable="true"
+			ariaLabelledBy="Title1">
+			<f:toolbar>
+				<Toolbar id="TB1">
+					<Title id="Title1" text="Supplier" level="H4" titleStyle="H4"/>
+					<ToolbarSpacer />
+					<Button icon="sap-icon://settings"/>
+					<Button icon="sap-icon://drop-down-list" />
+				</Toolbar>
+			</f:toolbar>
+			<f:layout>
+				<f:ResponsiveGridLayout
+					labelSpanXL="4"
+					labelSpanL="3"
+					labelSpanM="4"
+					labelSpanS="12"
+					adjustLabelSpan="false"
+					emptySpanXL="0"
+					emptySpanL="4"
+					emptySpanM="0"
+					emptySpanS="0"
+					columnsXL="2"
+					columnsL="1"
+					columnsM="1"
+					singleContainerFullSize="false" />
+			</f:layout>
+			<f:formContainers>
+				<f:FormContainer ariaLabelledBy="Title2">
+					<f:toolbar>
+						<Toolbar>
+							<Title id="Title2" text="Detail" level="H5" titleStyle="H5"/>
+							<ToolbarSpacer />
+							<Button icon="sap-icon://settings"/>
+						</Toolbar>
+					</f:toolbar>
+					<f:formElements>
+						<f:FormElement label="ID">
+							<f:fields>
+								<Input id="Id"/>
+							</f:fields>
+						</f:FormElement>
+						<f:FormElement label="Name">
+							<f:fields>
+								<Input id="Name"/>
+							</f:fields>
+						</f:FormElement>
+						<f:FormElement label="Concurrency">
+							<f:fields>
+								<Input id="Concurrency"/>
+							</f:fields>
+						</f:FormElement>
+					</f:formElements>
+				</f:FormContainer>
+				<f:FormContainer ariaLabelledBy="Title3">
+					<f:toolbar>
+						<Toolbar>
+							<Title id="Title3" text="Address" level="H5" titleStyle="H5"/>
+							<ToolbarSpacer />
+							<Button icon="sap-icon://settings"/>
+						</Toolbar>
+					</f:toolbar>
+					<f:formElements>
+						<f:FormElement label="Country">
+							<f:fields>
+								<Input id="country"/>
+							</f:fields>
+						</f:FormElement>
+						<f:FormElement label="City">
+							<f:fields>
+								<Input id="city"/>
+							</f:fields>
+						</f:FormElement>
+						<f:FormElement label="State">
+							<f:fields>
+								<Input id="state"/>
+							</f:fields>
+						</f:FormElement>
+						<f:FormElement label="Street">
+							<f:fields>
+								<Input id="street"/>
+							</f:fields>
+						</f:FormElement>
+						<f:FormElement label="ZIP Code">
+							<f:fields>
+								<Input id="zipCode"/>
+							</f:fields>
+						</f:FormElement>
+					</f:formElements>
+				</f:FormContainer>
+			</f:formContainers>
+		</f:Form>
+	</VBox>
+</mvc:View>
+
+
+
+<!--<mvc:View 	-->
+<!--	xmlns:mvc="sap.ui.core.mvc"-->
+<!--	xmlns:l="sap.ui.layout"-->
+<!--	xmlns:f="sap.ui.layout.form"-->
+<!--	xmlns:core="sap.ui.core"-->
+<!--	xmlns="sap.m" -->
+<!--	xmlns:html="http://www.w3.org/1999/xhtml" controllerName="BAS.HW2_SAPUI5_COURSE.controller.HW4ODataSupplierDetail">-->
+<!--	<VBox class="sapUiSmallMargin">-->
+<!--		<f:Form id="FormToolbar"-->
+<!--			editable="true"-->
+<!--			ariaLabelledBy="Title1">-->
+<!--			<f:toolbar>-->
+<!--				<Toolbar id="TB1">-->
+<!--					<Title id="Title1" text="Supplier" level="H4" titleStyle="H4"/>-->
+<!--					<ToolbarSpacer />-->
+<!--					<Button icon="sap-icon://settings"/>-->
+<!--					<Button icon="sap-icon://drop-down-list" />-->
+<!--				</Toolbar>-->
+<!--			</f:toolbar>-->
+<!--			<f:layout>-->
+<!--				<f:ResponsiveGridLayout-->
+<!--					labelSpanXL="4"-->
+<!--					labelSpanL="3"-->
+<!--					labelSpanM="4"-->
+<!--					labelSpanS="12"-->
+<!--					adjustLabelSpan="false"-->
+<!--					emptySpanXL="0"-->
+<!--					emptySpanL="4"-->
+<!--					emptySpanM="0"-->
+<!--					emptySpanS="0"-->
+<!--					columnsXL="2"-->
+<!--					columnsL="1"-->
+<!--					columnsM="1"-->
+<!--					singleContainerFullSize="false" />-->
+<!--			</f:layout>-->
+<!--			<f:formContainers>-->
+
+<!--				<f:FormContainer ariaLabelledBy="Title3">-->
+<!--					<f:toolbar>-->
+<!--						<Toolbar>-->
+<!--							<Title id="Title3" text="Address" level="H5" titleStyle="H5"/>-->
+<!--							<ToolbarSpacer />-->
+<!--							<Button icon="sap-icon://settings"/>-->
+<!--						</Toolbar>-->
+<!--					</f:toolbar>-->
+<!--					<f:formElements>-->
+<!--						<f:FormElement label="ID">-->
+<!--							<f:fields>-->
+<!--								<Input id="Id"/>-->
+<!--							</f:fields>-->
+<!--						</f:FormElement>-->
+<!--						<f:FormElement label="Name">-->
+<!--							<f:fields>-->
+<!--								<Input id="Name"/>-->
+<!--							</f:fields>-->
+<!--						</f:FormElement>-->
+<!--						<f:FormElement label="Concurrency">-->
+<!--							<f:fields>-->
+<!--								<Input id="Concurrency"/>-->
+<!--							</f:fields>-->
+<!--						</f:FormElement>-->
+<!--					</f:formElements>-->
+<!--				</f:FormContainer>-->
+				
+<!--				<f:FormContainer ariaLabelledBy="Title2">-->
+<!--					<f:toolbar>-->
+<!--						<Toolbar>-->
+<!--							<Title id="Title2" text="Detail" level="H5" titleStyle="H5"/>-->
+<!--							<ToolbarSpacer />-->
+<!--							<Button icon="sap-icon://settings"/>-->
+<!--						</Toolbar>-->
+<!--					</f:toolbar>-->
+<!--					<f:formElements>-->
+<!--						<f:FormElement label="Country">-->
+<!--							<f:fields>-->
+<!--								<Input id="country"/>-->
+<!--							</f:fields>-->
+<!--						</f:FormElement>-->
+<!--						<f:FormElement label="City">-->
+<!--							<f:fields>-->
+<!--								<Input id="city"/>-->
+<!--							</f:fields>-->
+<!--						<f:FormElement label="State">-->
+<!--							<f:fields>-->
+<!--								<Input id="state"/>-->
+<!--							</f:fields>-->
+<!--						</f:FormElement>-->
+<!--						<f:FormElement label="Street">-->
+<!--							<f:fields>-->
+<!--								<Input id="street"/>-->
+<!--							</f:fields>-->
+<!--						</f:FormElement>-->
+<!--						<f:FormElement label="ZIP Code">-->
+<!--							<f:fields>-->
+<!--								<Input id="zipCode"/>-->
+<!--							</f:fields>-->
+<!--						</f:FormElement>-->
+<!--					</f:formElements>-->
+<!--				</f:FormContainer>-->
+<!--			</f:formContainers>-->
+<!--		</f:Form>-->
+<!--	</VBox>-->
+<!--</mvc:View>-->

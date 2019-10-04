@@ -1,0 +1,57 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:html="http://www.w3.org/1999/xhtml" controllerName="BAS.HW2_SAPUI5_COURSE.controller.InputPage">
+	<App>
+		<pages>
+			<Page title="{i18n>titleInputPage}">
+				<content>
+				    <Bar id="bar3">
+				        <contentLeft>
+				            <Button xmlns="sap.m" xmlns:action="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1" id="button0_1568810019245" icon="sap-icon://navigation-left-arrow" press="action" action:wiring="\{'press':\{'navigation':\{'routeName':'MainForm'\}\}\}"/>
+				        </contentLeft>
+				    </Bar>
+				    <CheckBox xmlns="sap.m" text="Check Box" selected="false" id="box0"/>
+				    <ComboBox xmlns="sap.m" id="box1">
+				        <items>
+				            <core:Item xmlns:core="sap.ui.core" key="item-1-key" text="Item 1 Text" id="item0"/>
+				            <core:Item xmlns:core="sap.ui.core" key="item-2-key" text="Item 2 Text" id="item1"/>
+				            </items>
+				        
+				    </ComboBox>
+				    <ActionSelect id="select0"/>
+				    <DatePicker xmlns="sap.m" id="picker0"/>
+				    <FeedInput id="input0"/>
+				    <RatingIndicator xmlns="sap.m" maxValue="5" value="3" id="indicator0"/>
+				    <SegmentedButton xmlns="sap.m" selectedKey="one" id="button3">
+				        <items>
+				            <SegmentedButtonItem text="Button One" key="one" id="item24"/>
+				            <SegmentedButtonItem id="item29"/>
+				            <SegmentedButtonItem text="Button Two" key="two" id="item25"/>
+				            <SegmentedButtonItem text="Button Three" key="three" id="item26"/>
+				            </items>
+				        
+				    </SegmentedButton>
+				    <Input xmlns="sap.m" value="Value" id="input1"/>
+				    <SearchField xmlns="sap.m" placeholder="Search for ..." id="field1"/>
+				    <Select xmlns="sap.m" id="select1">
+				        <items>
+				            <core:Item xmlns:core="sap.ui.core" key="item-key-1" text="Item Text One" id="item30"/>
+				            <core:Item xmlns:core="sap.ui.core" key="item-key-2" text="Item Text Two" id="item31"/>
+				            </items>
+				        
+				    </Select>
+				    <TextArea xmlns="sap.m" value="Lorem ipsum dolor" rows="4" id="area0"/>
+				    <RadioButtonGroup xmlns="sap.m" columns="1" id="group0">
+				        <buttons>
+				            <RadioButton text="Option One" id="button1"/>
+				            <RadioButton text="Option Two" id="button2"/>
+				            </buttons>
+				        
+				    </RadioButtonGroup>
+				    <Switch xmlns="sap.m" id="switch0"/>
+				    <TimePicker xmlns="sap.m" id="picker1"/>
+				    <Slider xmlns="sap.m" value="30" id="slider0"/>
+				    <RadioButton xmlns="sap.m" groupName="GroupA" text="Option" id="button0"/>
+				</content>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>
