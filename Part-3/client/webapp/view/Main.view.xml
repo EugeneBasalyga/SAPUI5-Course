@@ -1,0 +1,81 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:html="http://www.w3.org/1999/xhtml" controllerName="BAS.client.controller.Main">
+	<App>
+		<pages>
+			<Page title="{i18n>title}">
+			<content>
+				    <Bar id="bar0">
+						<contentMiddle>
+							<Text xmlns="sap.m" text="TextBooks Table" id="text6"/>
+						</contentMiddle>
+				    </Bar>
+			    <Table noDataText="Drop column list items here and columns in the area above" id="textBookTable" items="{textBooks>/}">
+			        <items>
+			            <ColumnListItem type="Navigation" id="item">
+			            	<Text text="{textBooks>author}"/>
+		                    <Text text="{textBooks>title}"/>
+		                    <Text text="{textBooks>creationDate}"/>
+		                    <Text text="{textBooks>pages}"/>
+			            </ColumnListItem>
+			        </items>
+			        <columns>
+			            <Column id="column0">
+			                <header>
+			                    <Label text="Author" id="label0"/>
+			                </header>
+			            </Column>
+			            <Column id="column1">
+			                <header>
+			                    <Label text="Title" id="label1"/>
+			                </header>
+			            </Column>
+			            <Column id="column2">
+			                <header>
+			                    <Label text="Creation Date" id="label2"/>
+			                </header>
+			            </Column>
+			            <Column id="column3">
+			                <header>
+			                    <Label text="Pages" id="label3"/>
+			                </header>
+			            </Column>
+			        </columns>
+		        </Table>
+
+
+					    <sap.ui.layout.form:Form xmlns:sap.ui.layout.form="sap.ui.layout.form" editable="true" id="form0">
+					        <sap.ui.layout.form:formContainers>
+					            <sap.ui.layout.form:FormContainer title="TextBook Form" id="container0">
+					                <sap.ui.layout.form:formElements>
+					                    <sap.ui.layout.form:FormElement label="Author" id="element1">
+					                        <sap.ui.layout.form:fields>
+					                            <Input width="50%" id="inputAuthor"/>
+					                        </sap.ui.layout.form:fields>
+					                    </sap.ui.layout.form:FormElement>
+					                    <sap.ui.layout.form:FormElement label="Title" id="element0">
+					                        <sap.ui.layout.form:fields>
+					                            <Input width="50%" id="inputTitle"/>
+					                        </sap.ui.layout.form:fields>
+					                    </sap.ui.layout.form:FormElement>
+					                    <sap.ui.layout.form:FormElement label="Creation Date" id="element2">
+					                        <sap.ui.layout.form:fields>
+					                            <Input width="50%" id="inputCreationDate"/>
+					                        </sap.ui.layout.form:fields>
+					                    </sap.ui.layout.form:FormElement>										
+					                    <sap.ui.layout.form:FormElement label="Pages" id="element3">
+					                        <sap.ui.layout.form:fields>
+					                            <Input width="50%" id="inputPages"/>
+					                        </sap.ui.layout.form:fields>
+					                    </sap.ui.layout.form:FormElement>
+					                </sap.ui.layout.form:formElements>
+					            </sap.ui.layout.form:FormContainer>
+					        </sap.ui.layout.form:formContainers>
+					        <sap.ui.layout.form:layout>
+						<sap.ui.layout.form:ResponsiveGridLayout id="layout0"/>
+					        </sap.ui.layout.form:layout></sap.ui.layout.form:Form>
+					    <Button xmlns="sap.m" text="Submit" id="buttonSubmit" press="OnSubmitPress"/>
+
+			</content>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>

@@ -21,10 +21,11 @@ MongoClient.connect(url, (err, client)=>{
         console.log(url);
         return console.log(err);
     }
-    app.post("/book", (req, res)=>{
+    app.post("/books", (req, res)=>{
         const db = client.db("book");
         const obj = {
-            name: req.body.name,
+            author: req.body.author,
+            title: req.body.title,
             pages: req.body.pages
         };
         db.collection("books").insertOne(obj, (err, item)=>{
@@ -37,7 +38,7 @@ MongoClient.connect(url, (err, client)=>{
         })
     });
 
-    app.get("/book/:id", (req, res) => {
+    app.get("/books/:id", (req, res) => {
         const id = req.params.id;
         const path = {
             "_id": new ObjectID(id)
@@ -62,21 +63,39 @@ MongoClient.connect(url, (err, client)=>{
         });
     });
 
-    app.delete('/book/:id', (req,res)=>{
+    app.delete('/books/:id', (req,res)=>{
         const id = req.params.id;
         const p = {
             "_id": new ObjectID(id)
         };
-        const db = client.db("bookdb");
-        db.collection("book").remove(p, (err, item)=>{
+        const db = client.db("book");
+        db.collection("books").remove(p, (err, item)=>{
             if(err){
                 res.send({
-                    'err': 'g'
+                    'error': 'An error has occurred'
                 })
             }else {
             res.send(item);
             }
         })
     })
+
+    app.put ('/books/:id', (req, res) => {
+        const id = req.params.id;
+        const details = { '_id': new ObjectID(id) };
+        const note = { 
+            author: req.body.author, 
+            title: req.body.title,
+            pages: req.body.pages
+         };
+        const db = client.db("book");
+        db.collection('books').update(details, note, (err, result) => {
+          if (err) {
+              res.send({'error':'An error has occurred'});
+          } else {
+              res.send(note);
+          } 
+        });
+      });
 
 });
